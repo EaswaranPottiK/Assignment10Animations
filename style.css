@@ -1,0 +1,39 @@
+*{
+    border:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100vh; /*to bring contents to middle this property is essential */
+}
+
+.container{
+    display: flex; /*increases size of first image to match with 2th and 3rd*/
+    justify-content: space-around;
+    width: 1100px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
+}
+
+img{
+    max-width: 350px;
+    box-shadow: 0px 0px 8px grey;
+    border-radius: 5px;
+    transform: perspective(800px) rotateY(20deg);
+    
+}
+
+.container:hover img{
+    opacity: 0.3;
+    transition:0.5s;
+}
+.container img:hover{
+    transform: none;
+    transition:0.5s;
+    opacity: 1;
+}
+
